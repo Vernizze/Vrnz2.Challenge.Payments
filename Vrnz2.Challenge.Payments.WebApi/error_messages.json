@@ -1,0 +1,38 @@
+{
+  "LocaleMessages": [
+    {
+      "LocaleName": "pt-BR",
+      "Messages": [
+        {
+          "Code": "CREATE_CUSTOMER_00001",
+          "Message": "Nome do Cliente Inválido!"
+        },
+        {
+          "Code": "CREATE_CUSTOMER_00002",
+          "Message": "CPF do Cliente Inválido!"
+        },
+        {
+          "Code": "CREATE_CUSTOMER_00003",
+          "Message": "UF do Cliente Inválido!"
+        }
+      ]
+    },
+    {
+      "LocaleName": "en-US",
+      "Messages": [
+        {
+          "Code": "CREATE_CUSTOMER_00001",
+          "Message": "Invalid Customer Name!"
+        },
+        {
+          "Code": "CREATE_CUSTOMER_00002",
+          "Message": "Invalid Customer Individual TaxPayer Registr (ITR)!"
+        },
+        {
+          "Code": "CREATE_CUSTOMER_00003",
+          "Message": "Invalid Customer Residence State!"
+        }
+      ]
+    }
+  ]
+}
