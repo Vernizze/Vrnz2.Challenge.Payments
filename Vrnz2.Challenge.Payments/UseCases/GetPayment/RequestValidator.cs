@@ -11,7 +11,7 @@ namespace Vrnz2.Challenge.Payments.UseCases.GetPayment
         {
             RuleFor(v => v)
                 .Must(IsValid)
-                .WithMessage(ErrorMessageCodesFactory.INVALID_ITR_ERROR);
+                .WithMessage(ErrorMessageCodesFactory.INVALID_PAYMENT_SEARCH_QUERY_ERROR);
         }
 
         private bool IsValid(GetPaymentModel.Request request)

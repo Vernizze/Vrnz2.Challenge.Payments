@@ -21,11 +21,11 @@ namespace Vrnz2.Challenge.Payments.UseCases.CreatePayment
 
             RuleFor(v => v)
                 .Must(IsValid)
-                .WithMessage(ErrorMessageCodesFactory.INVALID_ITR_ERROR);
+                .WithMessage(ErrorMessageCodesFactory.INVALID_PAYMENT_CREATION_COMMAND_ERROR);
 
             RuleFor(v => v)
                 .Must(IsNew)
-                .WithMessage(ErrorMessageCodesFactory.INVALID_ITR_ERROR);
+                .WithMessage(ErrorMessageCodesFactory.PAYMENT_ALREADY_EXISTS_ERROR);
         }
 
         #endregion

@@ -4,16 +4,16 @@
       "LocaleName": "pt-BR",
       "Messages": [
         {
-          "Code": "CREATE_CUSTOMER_00001",
-          "Message": "Nome do Cliente Inválido!"
+          "Code": "CREATE_PAYMENT_00001",
+          "Message": "Requisição de Criação de Pagamento Inválida!"
         },
         {
-          "Code": "CREATE_CUSTOMER_00002",
-          "Message": "CPF do Cliente Inválido!"
+          "Code": "CREATE_PAYMENT_00002",
+          "Message": "Pagamento já existente!"
         },
         {
-          "Code": "CREATE_CUSTOMER_00003",
-          "Message": "UF do Cliente Inválido!"
+          "Code": "CREATE_PAYMENT_00003",
+          "Message": "Requisição de Consulta de Pagamentos inválida!"
         }
       ]
     },
@@ -21,16 +21,16 @@
       "LocaleName": "en-US",
       "Messages": [
         {
-          "Code": "CREATE_CUSTOMER_00001",
-          "Message": "Invalid Customer Name!"
+          "Code": "CREATE_PAYMENT_00001",
+          "Message": "Invalid Payment creation request!"
         },
         {
-          "Code": "CREATE_CUSTOMER_00002",
-          "Message": "Invalid Customer Individual TaxPayer Registr (ITR)!"
+          "Code": "CREATE_PAYMENT_00002",
+          "Message": "Payment already exists!"
         },
         {
-          "Code": "CREATE_CUSTOMER_00003",
-          "Message": "Invalid Customer Residence State!"
+          "Code": "CREATE_PAYMENT_00003",
+          "Message": "Invalid Payments sarch request!"
         }
       ]
     }
