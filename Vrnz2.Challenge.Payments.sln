@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vrnz2.Challenge.Payments.In
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vrnz2.Challenge.Payments", "Vrnz2.Challenge.Payments\Vrnz2.Challenge.Payments.csproj", "{62106303-9262-4E7A-AFFE-FC39DC6D2415}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vrnz2.Challenge.ServiceContracts", "..\Vrnz2.Challenge.ServiceContracts\Vrnz2.Challenge.ServiceContracts\Vrnz2.Challenge.ServiceContracts.csproj", "{C541700F-5A90-4D1F-A0CB-0BF6AA04A644}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{62106303-9262-4E7A-AFFE-FC39DC6D2415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62106303-9262-4E7A-AFFE-FC39DC6D2415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62106303-9262-4E7A-AFFE-FC39DC6D2415}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C541700F-5A90-4D1F-A0CB-0BF6AA04A644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C541700F-5A90-4D1F-A0CB-0BF6AA04A644}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C541700F-5A90-4D1F-A0CB-0BF6AA04A644}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C541700F-5A90-4D1F-A0CB-0BF6AA04A644}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Vrnz2.Challenge.ServiceContracts.ErrorMessageCodes;
 using Vrnz2.Challenge.ServiceContracts.UseCases.Models.Base;
-using Vrnz2.Infra.Crosscutting.Extensions;
+using Vrnz2.Infra.CrossCutting.Extensions;
 
 namespace Vrnz2.Challenge.Payments.Shared.Validations
 {

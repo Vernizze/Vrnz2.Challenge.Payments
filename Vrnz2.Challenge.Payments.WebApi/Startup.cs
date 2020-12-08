@@ -14,7 +14,8 @@ using Vrnz2.Challenge.Payments.Infra.Factories;
 using Vrnz2.Challenge.Payments.Shared.Queues;
 using Vrnz2.Challenge.Payments.Shared.Settings;
 using Vrnz2.Challenge.Payments.Shared.Validations;
-using Vrnz2.Infra.Crosscutting.Utils;
+using Vrnz2.Infra.CrossCutting.Utils;
+using GetPayment = Vrnz2.Challenge.Payments.UseCases.GetPayment;
 
 namespace Vrnz2.Challenge.Payments.WebApi
 {
@@ -54,12 +55,12 @@ namespace Vrnz2.Challenge.Payments.WebApi
                 .AddSettings(out AppSettings appSettings)
                 .AddLogsServiceExtensions()
                 .AddAutoMapper(AssembliesFactory.GetAssemblies())
-                //.AddConsumers(appSettings)
                 .AddMediatR(AssembliesFactory.GetAssemblies<ValidationHelper>())
                 .AddIServiceColletion()
                 .AddValidations()
                 .AddScoped<QueueHandler>()
                 .AddScoped<ControllerHelper>()
+                .AddTransient<GetPayment.GetPayment>()
                 .AddSwaggerGen(c =>
                 {
                     c.SwaggerDoc(SWAGGER_VERSION, new OpenApiInfo { Title = SWAGGER_TITLE, Version = SWAGGER_VERSION });

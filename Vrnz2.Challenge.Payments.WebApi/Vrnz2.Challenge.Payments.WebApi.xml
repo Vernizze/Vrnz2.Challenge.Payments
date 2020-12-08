@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vrnz2.Challenge.Payments.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Vrnz2.Challenge.Payments.WebApi.Controllers.PaymentsController.Post(Vrnz2.Challenge.ServiceContracts.UseCases.Models.CreatePaymentModel.Request)">
+            <summary>
+            [Post] Creation Payment end point
+            </summary>
+            <param name="request">Cpf, DueDate (Valid Date/Time) and Value (Money value in format '0,000.00')</param>
+            <returns>Http Status Code 'OK' with content => Success (True/False), Message and Tid (Transaction Id) of Operation</returns>
+        </member>
+        <member name="M:Vrnz2.Challenge.Payments.WebApi.Controllers.PaymentsController.Get(System.String,System.String)">
+            <summary>
+            [GET] Get Payments data end point
+            </summary>
+            <param name="cpf">Valid Customer Cpf OR</param>
+            <param name="monthRefDueDate">Valid Month + Year Due Date parameter (expected format => "yyyy-MM")</param>
+            <returns>Http Status Code 'OK' with content => List of Payemnts containning Tid (Transaction Id) of Operation, Cpf, Due Date and Value</returns>
+        </member>
+        <member name="M:Vrnz2.Challenge.Payments.WebApi.Controllers.PingController.Ping">
+            <summary>
+            Service Heart Beat end point
+            </summary>
+            <returns>DateTime.UtcNow + Service Name</returns>
+        </member>
+    </members>
+</doc>
