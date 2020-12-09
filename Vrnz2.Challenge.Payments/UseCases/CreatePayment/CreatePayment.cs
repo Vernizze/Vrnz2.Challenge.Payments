@@ -50,10 +50,9 @@ namespace Vrnz2.Challenge.Payments.UseCases.CreatePayment
         {
             var customer = _mapper.Map<Payment>(request);
 
-            using (var mongo = new Data.MongoDB.MongoDB(_connectionStringsSettings.MongoDbChallenge, MONGODB_COLLECTION, MONGODB_DATABASE))
-                await mongo.Add(customer);
+            await SendToMongo(customer);
 
-            await _queueHandler.Send(_mapper.Map<PaymentNotification.Created>(request), _queuesSettings.PaymentCreatedQueueName);
+            await SendToQueue(_mapper.Map<PaymentNotification.Created>(request));
 
             return new CreatePaymentModel.Response
             {
@@ -62,6 +61,15 @@ namespace Vrnz2.Challenge.Payments.UseCases.CreatePayment
                 Tid = customer.Tid
             };
         }
+
+        public virtual async Task SendToMongo(Payment payment) 
+        {
+            using (var mongo = new Data.MongoDB.MongoDB(_connectionStringsSettings.MongoDbChallenge, MONGODB_COLLECTION, MONGODB_DATABASE))
+                await mongo.Add(payment);
+        }
+
+        public virtual async Task SendToQueue(PaymentNotification.Created notification)
+            => await _queueHandler.Send(_mapper.Map<PaymentNotification.Created>(notification), _queuesSettings.PaymentCreatedQueueName);
 
         #endregion
     }

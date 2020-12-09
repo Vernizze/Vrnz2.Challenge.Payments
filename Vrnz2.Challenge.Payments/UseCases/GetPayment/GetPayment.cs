@@ -16,7 +16,7 @@ namespace Vrnz2.Challenge.Payments.UseCases.GetPayment
     public class GetPayment
         : IRequestHandler<GetPaymentModel.Request, GetPaymentModel.Response>
     {
-        #region Variables
+        #region Constants
 
         private const string MONGODB_COLLECTION = "Payment";
         private const string MONGODB_DATABASE = "Challenge";
@@ -49,7 +49,7 @@ namespace Vrnz2.Challenge.Payments.UseCases.GetPayment
             return _mapper.Map<GetPaymentModel.Response>(payments);
         }
 
-        public async Task<List<Payment>> GetPayments(GetPaymentModel.Request request)
+        public virtual async Task<List<Payment>> GetPayments(GetPaymentModel.Request request)
         {
             List<Payment> result;
 

@@ -67,7 +67,7 @@ namespace Vrnz2.Challenge.Payments.UseCases.GetCustomerPayments
             };
         }
 
-        public async Task<List<CustomerConsumption>> GetPayments(GetCustomerPaymentsModel.Request request)
+        public virtual async Task<List<CustomerConsumption>> GetPayments(GetCustomerPaymentsModel.Request request)
         {
             List<CustomerConsumption> result;
 

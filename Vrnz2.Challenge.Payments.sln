@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vrnz2.Challenge.Payments.In
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vrnz2.Challenge.Payments", "Vrnz2.Challenge.Payments\Vrnz2.Challenge.Payments.csproj", "{62106303-9262-4E7A-AFFE-FC39DC6D2415}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrnz2.Challenge.Payments.Test", "Vrnz2.Challenge.Payments.Test\Vrnz2.Challenge.Payments.Test.csproj", "{569C7BFA-76AE-4B7C-8D28-8AB4EFF407BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{62106303-9262-4E7A-AFFE-FC39DC6D2415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62106303-9262-4E7A-AFFE-FC39DC6D2415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62106303-9262-4E7A-AFFE-FC39DC6D2415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569C7BFA-76AE-4B7C-8D28-8AB4EFF407BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569C7BFA-76AE-4B7C-8D28-8AB4EFF407BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569C7BFA-76AE-4B7C-8D28-8AB4EFF407BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569C7BFA-76AE-4B7C-8D28-8AB4EFF407BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
