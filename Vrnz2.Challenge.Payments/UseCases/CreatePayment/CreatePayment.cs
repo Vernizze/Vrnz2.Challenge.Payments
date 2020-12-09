@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Options;
-using System;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Vrnz2.Challenge.Payments.Shared.Entities;
@@ -10,8 +8,6 @@ using Vrnz2.Challenge.Payments.Shared.Queues;
 using Vrnz2.Challenge.Payments.Shared.Settings;
 using Vrnz2.Challenge.ServiceContracts.Notifications;
 using Vrnz2.Challenge.ServiceContracts.UseCases.Models;
-using Vrnz2.Infra.CrossCutting.Extensions;
-using Vrnz2.Infra.CrossCutting.Types;
 
 namespace Vrnz2.Challenge.Payments.UseCases.CreatePayment
 {
@@ -57,7 +53,7 @@ namespace Vrnz2.Challenge.Payments.UseCases.CreatePayment
             using (var mongo = new Data.MongoDB.MongoDB(_connectionStringsSettings.MongoDbChallenge, MONGODB_COLLECTION, MONGODB_DATABASE))
                 await mongo.Add(customer);
 
-            await _queueHandler.Send(_mapper.Map<PaymentNotification.Created>(request), _queuesSettings.CustomerCreatedQueueName);
+            await _queueHandler.Send(_mapper.Map<PaymentNotification.Created>(request), _queuesSettings.PaymentCreatedQueueName);
 
             return new CreatePaymentModel.Response
             {

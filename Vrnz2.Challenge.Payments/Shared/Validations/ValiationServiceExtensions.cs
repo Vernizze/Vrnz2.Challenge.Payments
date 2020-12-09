@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using CreatePayment = Vrnz2.Challenge.Payments.UseCases.CreatePayment;
 using GetPayment = Vrnz2.Challenge.Payments.UseCases.GetPayment;
+using GetCustomerPayments = Vrnz2.Challenge.Payments.UseCases.GetCustomerPayments;
 using Vrnz2.Challenge.ServiceContracts.UseCases.Models;
 
 namespace Vrnz2.Challenge.Payments.Shared.Validations
@@ -13,6 +14,7 @@ namespace Vrnz2.Challenge.Payments.Shared.Validations
                 .AddScoped<IValidatorFactory, ValidatorFactory>()
                 .AddScoped<ValidationHelper>()
                 .AddTransient<IValidator<CreatePaymentModel.Request>, CreatePayment.RequestValidator>()
-                .AddTransient<IValidator<GetPaymentModel.Request>, GetPayment.RequestValidator>();
+                .AddTransient<IValidator<GetPaymentModel.Request>, GetPayment.RequestValidator>()
+                .AddTransient<IValidator<GetCustomerPaymentsModel.Request>, GetCustomerPayments.RequestValidator>();
     }
 }

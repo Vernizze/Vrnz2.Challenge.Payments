@@ -13,9 +13,9 @@
     <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Serilog" Version="2.10.0" />
-    <PackageReference Include="Vrnz2.Challenge.ServiceContracts" Version="1.0.5" />
-    <PackageReference Include="Vrnz2.Data.MongoDB" Version="1.0.3" />
-    <PackageReference Include="Vrnz2.Infra.Crosscutting" Version="1.0.8" />
+    <PackageReference Include="Vrnz2.Challenge.ServiceContracts" Version="1.0.6" />
+    <PackageReference Include="Vrnz2.Data.MongoDB" Version="1.0.4" />
+    <PackageReference Include="Vrnz2.Infra.Crosscutting" Version="1.0.9" />
   </ItemGroup>
 
 </Project>

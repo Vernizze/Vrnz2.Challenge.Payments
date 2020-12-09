@@ -50,7 +50,7 @@ namespace Vrnz2.Challenge.Payments.WebApi.Controllers
         /// <summary>
         /// [GET] Get Payments data end point
         /// </summary>
-        /// <param name="cpf">Valid Customer Cpf OR</param>
+        /// <param name="cpf">Valid Customer Cpf AND/OR</param>
         /// <param name="monthRefDueDate">Valid Month + Year Due Date parameter (expected format => "yyyy-MM")</param>
         /// <returns>Http Status Code 'OK' with content => List of Payemnts containning Tid (Transaction Id) of Operation, Cpf, Due Date and Value</returns>
         [HttpGet]
@@ -59,6 +59,22 @@ namespace Vrnz2.Challenge.Payments.WebApi.Controllers
         public async Task<IActionResult> Get([FromQuery] string cpf, string monthRefDueDate)
         {
             var request = new GetPaymentModel.Request(cpf, monthRefDueDate);
+
+            return await _controllerHelper.ReturnAsync((request) => _mediator.Send(request), request);
+        }
+
+        /// <summary>
+        /// [GET] Get Payments resume of a Customer data end point
+        /// </summary>
+        /// <param name="cpf">Valid Customer Cpf AND/OR</param>
+        /// <param name="monthRefPaymentDate">Valid Month + Year Due Date parameter (expected format => "yyyy-MM")</param>
+        /// <returns>Http Status Code 'OK' with content => List of Payemnts containning Cpf, Payments Period (format yyyy-MM) and Total Value</returns>
+        [HttpGet("customer")]
+        [ProducesResponseType(typeof(GetCustomerPaymentsModel.Response), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        public async Task<IActionResult> GetCustomerPaymentos([FromQuery] string cpf, string monthRefPaymentDate)
+        {
+            var request = new GetCustomerPaymentsModel.Request(cpf, monthRefPaymentDate);
 
             return await _controllerHelper.ReturnAsync((request) => _mediator.Send(request), request);
         }

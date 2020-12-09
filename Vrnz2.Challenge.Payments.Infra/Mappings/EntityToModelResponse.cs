@@ -14,6 +14,7 @@ namespace Vrnz2.Challenge.Payments.Infra.Mappings
             var config = new MapperConfiguration(cfg => {
                 cfg.CreateMap<Payment, GetPaymentModel.ResponsePayments>();
             });
+
             var mapper = config.CreateMapper();
 
             CreateMap<Payment, GetPaymentModel.ResponsePayments>();

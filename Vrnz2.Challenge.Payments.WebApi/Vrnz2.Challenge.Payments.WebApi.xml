@@ -15,9 +15,17 @@
             <summary>
             [GET] Get Payments data end point
             </summary>
-            <param name="cpf">Valid Customer Cpf OR</param>
+            <param name="cpf">Valid Customer Cpf AND/OR</param>
             <param name="monthRefDueDate">Valid Month + Year Due Date parameter (expected format => "yyyy-MM")</param>
             <returns>Http Status Code 'OK' with content => List of Payemnts containning Tid (Transaction Id) of Operation, Cpf, Due Date and Value</returns>
+        </member>
+        <member name="M:Vrnz2.Challenge.Payments.WebApi.Controllers.PaymentsController.GetCustomerPaymentos(System.String,System.String)">
+            <summary>
+            [GET] Get Payments resume of a Customer data end point
+            </summary>
+            <param name="cpf">Valid Customer Cpf AND/OR</param>
+            <param name="monthRefPaymentDate">Valid Month + Year Due Date parameter (expected format => "yyyy-MM")</param>
+            <returns>Http Status Code 'OK' with content => List of Payemnts containning Cpf, Payments Period (format yyyy-MM) and Total Value</returns>
         </member>
         <member name="M:Vrnz2.Challenge.Payments.WebApi.Controllers.PingController.Ping">
             <summary>
