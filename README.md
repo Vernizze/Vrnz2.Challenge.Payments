@@ -7,7 +7,7 @@
 
 -[GET]   => /api/payments - Obtém Pagamentos cadastrados
 
--[GET]   => /api/payments - Obtém contabilização feita pelo serviços 'Vrnz2.Challenge.CustomerConsumption' com o valor devido pelos Clientes
+-[GET]   => /api/payments/customer - Obtém contabilização feita pelo serviços 'Vrnz2.Challenge.CustomerConsumption' com o valor devido pelos Clientes
 
 => Persiste na Collection 'Challenge\Payment'
 
