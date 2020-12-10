@@ -17,7 +17,7 @@ namespace Vrnz2.Challenge.Payments.Shared.Validations
 
         #endregion 
 
-        #region Variables
+        #region Constructor
 
         public ValidationHelper(ILogger logger, IValidatorFactory validatorFactory)
         {

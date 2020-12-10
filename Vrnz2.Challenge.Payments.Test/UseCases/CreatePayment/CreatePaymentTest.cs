@@ -57,7 +57,7 @@ namespace Vrnz2.Challenge.Payments.Test.UseCases.CreatePayment
         }
 
         [Fact]
-        public async Task GetCreatePaymentTest()
+        public async Task CreatePayment_Handler_Test()
         {
             //Arrange           
             Cpf cpf = "434.443.474-99";
@@ -75,7 +75,7 @@ namespace Vrnz2.Challenge.Payments.Test.UseCases.CreatePayment
 
             _mapper.Map<Payment>(Arg.Any<CreatePaymentModel.Request>()).Returns(payment);
 
-            var createPayment = GetInstance();
+            var service = GetInstance();
 
             var request = new CreatePaymentModel.Request
             {
@@ -85,7 +85,7 @@ namespace Vrnz2.Challenge.Payments.Test.UseCases.CreatePayment
             };
 
             //Act
-            var result = await createPayment.Handle(request, new System.Threading.CancellationToken());
+            var result = await service.Handle(request, new System.Threading.CancellationToken());
             
             //Assert
             Assert.NotNull(result);

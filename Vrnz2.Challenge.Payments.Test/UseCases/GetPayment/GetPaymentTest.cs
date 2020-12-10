@@ -33,13 +33,13 @@ namespace Vrnz2.Challenge.Payments.Test.UseCases.GetPayment
             => new GetPaymentMock(_connectionStringsOptions, _mapper);
 
         [Fact]
-        public async Task GetCreatePaymentTest()
+        public async Task GetPayment_Hamdler_Test()
         {
             //Arrange           
             var tid = new Guid("ef01bedb-2d4c-418e-ac52-1e8a10b9b2a8");
             Cpf cpf = "434.443.474-99";
             var paymentDate = new DateTime(2020, 12, 01);
-            var createPayment = GetInstance();
+            var service = GetInstance();
 
             var request = new GetPaymentModel.Request
             {
@@ -59,7 +59,7 @@ namespace Vrnz2.Challenge.Payments.Test.UseCases.GetPayment
             _mapper.Map<GetPaymentModel.Response>(Arg.Any<List<Payment>>()).Returns(response);
 
             //Act
-            var result = await createPayment.Handle(request, new System.Threading.CancellationToken());
+            var result = await service.Handle(request, new System.Threading.CancellationToken());
 
             //Assert
             Assert.NotNull(result);
